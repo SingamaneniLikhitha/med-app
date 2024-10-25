@@ -1,0 +1,50 @@
+/* HistoryPage.css */
+
+.history-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-container h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .history-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+  }
+  
+  .history-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .history-item h3 {
+    cursor: pointer;
+    color: #007bff;
+    margin: 0;
+  }
+  
+  .history-item p {
+    margin: 5px 0;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
