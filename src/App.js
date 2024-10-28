@@ -4,8 +4,11 @@ import FormScreen from './components/FormScreen';
 import PaymentScreen from './components/PaymentScreen';
 import HomePage from './components/HomePage'; 
 import NavBar from './components/NavBar';
-import HistoryPage from './components/HistoryPage'; // Import HistoryPage
-import DetailsPage from './components/DetailsPage'; // Import DetailsPage
+import HistoryPage from './components/HistoryPage'; 
+import DetailsPage from './components/DetailsPage'; 
+import Appointment from './components/Appointment'; // Import Appointment component
+import Success from './components/Success'; // Adjust the path as necessary
+
 import './App.css';
 
 const App = () => {
@@ -57,8 +60,10 @@ const App = () => {
           <Route path="/home" element={<HomePage />} />
           <Route path="/form" element={<FormScreen formData={formData} setFormData={setFormData} />} />
           <Route path="/payment" element={<PaymentScreen formData={formData} />} />
+          <Route path="/success" element={<Success />} /> {/* Changed from component to element */}
           <Route path="/history" element={<HistoryPage />} /> {/* Add the history route */}
           <Route path="/history/:serialNumber" element={<DetailsPage />} /> {/* Details route */}
+          <Route path="/appointment" element={<Appointment />} /> {/* Appointment route */}
         </Routes>
       </div>
     </Router>

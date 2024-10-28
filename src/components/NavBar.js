@@ -13,7 +13,7 @@ const NavBar = () => {
       <div className="navbar-links">
         <ul>
           <li onClick={() => navigate('/form')}>Reimburse</li>
-          <li onClick={() => navigate('/book-appointment')}>Book an Appointment</li>
+          <li onClick={() => navigate('/appointment')}>Book an Appointment</li>
           <li onClick={() => navigate('/history')}>History</li>
           <li onClick={() => navigate('/profile')}>User Profile</li>
         </ul>
