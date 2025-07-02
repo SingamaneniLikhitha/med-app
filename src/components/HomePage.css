@@ -1,27 +1,112 @@
-/* HomePage.css */
-.home-content {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .info-section {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .info-box {
-    width: 45%;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-  }
-  
-  .info-box h2 {
-    margin-bottom: 10px;
-  }
-  
-  .info-box p {
-    font-size: 16px;
-  }
-  
+:root {
+  --primary-color: #e75480; /* coral pink (10%) */
+  --secondary-color: #0a1d37; /* navy blue (30%) */
+  --background-color: #e8f5ff; /* light blue (60%) */
+  --font-family: 'Segoe UI', 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+.home-container {
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 1rem;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover {
+  color: var(--primary-color);
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero span {
+  color: var(--primary-color);
+}
+
+.info-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-box {
+  background: #fff9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-section {
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonial-box {
+  margin: 1rem auto;
+  padding: 1rem;
+  background: #fff9f9;
+  border-left: 5px solid var(--primary-color);
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tips-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.tips-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tip {
+  background: #fffbe6;
+  padding: 1.5rem;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

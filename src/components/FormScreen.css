@@ -1,174 +1,269 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #e9ecef;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* FormScreen.css - Refreshed Styling */
+
+.form-screen-wrapper {
+    background-color: #f8f9fa; /* Light, clean background, slightly off-white */
+    padding: 40px 20px; /* Generous padding around the form */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align at the top */
+    min-height: calc(100vh - 80px); /* Adjust based on NavBar height, assuming 80px */
+    font-family: 'Montserrat', sans-serif; /* Consistent with NavBar */
 }
 
-h2 {
-  text-align: center;
-  color: #333;
-  margin-top: 30px;
-  font-size: 28px;
-  letter-spacing: 1px;
+.form-container {
+    background-color: #ffffff; /* White background for the form card */
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer, more visible shadow */
+    padding: 35px 45px; /* Increased padding inside the form */
+    width: 100%;
+    max-width: 700px; /* Max width for readability on large screens */
+    margin-bottom: 40px; /* Space at the bottom */
 }
 
-form {
-  background-color: white;
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+.form-container h2,
+.form-container h3 {
+    color: #3f4a59; /* Dark desaturated blue for headings, consistent with NavBar text */
+    margin-bottom: 25px; /* More space below headings */
+    font-weight: 600; /* Slightly bolder headings */
+    border-bottom: 1px solid #e0e0e0; /* Subtle line below sections */
+    padding-bottom: 10px;
+    margin-top: 30px; /* Space above sections */
 }
 
-form:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.form-container h2 {
+    font-size: 2.2em;
+    text-align: center;
+    color: #20a8d8; /* Primary blue for the main form title */
+    border-bottom: none; /* No line under main title */
 }
 
-form h3 {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  color: #495057;
-  font-size: 20px;
+.form-container h3 {
+    font-size: 1.6em;
+    color: #556270; /* Slightly softer blue-grey for section titles */
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-input[type="email"],
-textarea {
-  width: calc(50% - 20px);
-  padding: 12px;
-  margin-bottom: 15px;
-  margin-right: 20px;
-  border: 1px solid #ced4da;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: all 0.2s ease-in-out;
+.form-section {
+    margin-bottom: 30px; /* More space between form sections */
 }
 
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #80bdff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+.form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500; /* Medium font weight for labels */
+    color: #556270; /* Consistent label color */
+    font-size: 0.95em;
 }
 
-input[type="radio"] {
-  margin-right: 10px;
+.form-section input[type="text"],
+.form-section input[type="date"],
+.form-section input[type="tel"],
+.form-section input[type="email"],
+.form-section input[type="number"],
+.form-section select {
+    width: calc(100% - 22px); /* Account for padding */
+    padding: 12px 10px; /* Increased padding for input fields */
+    margin-bottom: 18px; /* Space below inputs */
+    border: 1px solid #ced4da; /* Soft border color */
+    border-radius: 6px; /* Slightly rounded input fields */
+    font-size: 1em;
+    color: #495057; /* Darker text inside inputs */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fdfdff; /* Very slight light background for inputs */
 }
 
-textarea {
-  width: 100%;
-  height: 120px;
+.form-section input:focus,
+.form-section select:focus {
+    border-color: #20a8d8; /* Primary blue on focus */
+    box-shadow: 0 0 0 0.2rem rgba(32, 168, 216, 0.25); /* Subtle blue glow on focus */
+    outline: none;
 }
 
-button {
-  padding: 12px 25px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+/* Gender Radio Buttons */
+.gender-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center; /* Align label and radios vertically */
+    gap: 20px; /* Space between gender options */
 }
 
-button:hover {
-  background-color: #0056b3;
+.gender-group label {
+    margin-bottom: 0; /* Remove bottom margin for radio labels */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #556270;
 }
 
-button:disabled {
-  background-color: #999;
-  cursor: not-allowed;
+.gender-group input[type="radio"] {
+    margin-right: 8px; /* Space between radio button and text */
+    transform: scale(1.1); /* Slightly larger radio buttons */
+    accent-color: #20a8d8; /* Set radio button color directly */
+    cursor: pointer;
 }
 
-button[type="button"] {
-  margin-right: 15px;
-}
 
-.go-back-arrow {
-  background-color: transparent;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #007bff;
-}
-
+/* Surgery Details Specific Styling */
 .surgeries-container {
-  margin-bottom: 25px;
-}
-
-.surgeries-container > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.surgeries-container input {
-  width: calc(45% - 10px);
-  padding: 12px;
-}
-
-button[type="button"]:hover {
-  background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-  input[type="text"],
-  input[type="date"],
-  input[type="number"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    margin-right: 0;
-    font-size: 14px;
-  }
-
-  .surgeries-container input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .surgeries-container > div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button {
-    width: 100%;
-    margin-top: 15px;
-  }
-}
-
-.surgeries-container > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    gap: 15px; /* Space between surgery name, bill, and remove button */
+    align-items: center;
+    margin-bottom: 15px; /* Space between each surgery entry */
 }
 
 .surgeries-container select,
 .surgeries-container input[type="number"] {
-  width: auto; /* Fit to content */
-  margin-right: 10px; /* Add space between dropdown and input */
+    flex-grow: 1; /* Allow them to take available space */
+    margin-bottom: 0; /* Remove extra margin */
 }
 
-.surgeries-container select {
-  padding: 5px; /* Add padding for better spacing */
+.remove-button {
+    background-color: #dc3545; /* Red for remove button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
-.surgeries-container input[type="number"] {
-  padding: 5px;
-  width: 200px; /* Set a reasonable width for the surgery bill */
+.remove-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: translateY(-1px);
 }
 
-button {
-  display: inline
+.no-surgeries-message {
+    color: #6c757d;
+    text-align: center;
+    margin-top: -10px; /* Pull up slightly */
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+/* Primary Button */
+button[type="submit"] {
+    background-color: #28a745; /* Green for submit/next button (Success color) */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: block; /* Make it a block element */
+    width: 100%; /* Full width */
+    margin-top: 40px; /* Space above the button */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3); /* Subtle shadow on hover */
+}
+
+button[type="submit"]:disabled {
+    background-color: #cccccc; /* Light grey for disabled state */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Secondary Button (Add Surgery, Check Policy) */
+.secondary {
+    background-color: #6c757d; /* Neutral grey for secondary actions */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 10px; /* Space above secondary buttons */
+}
+
+.secondary:hover:not(:disabled) {
+    background-color: #5a6268; /* Darker grey on hover */
+    transform: translateY(-1px);
+}
+
+.secondary:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Policy Check Message */
+.policy-message {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.4s forwards ease-out; /* Fade in animation */
+}
+
+/* Specific colors for policy message based on content (you might need JS to add classes) */
+.policy-message.success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb;
+}
+
+.policy-message.error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb;
+}
+
+.policy-message.info {
+    background-color: #d1ecf1; /* Light blue */
+    color: #0c5460; /* Dark blue text */
+    border: 1px solid #bee5eb;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px 30px;
+        margin: 20px auto; /* Center with smaller margin */
+    }
+
+    .form-container h2 {
+        font-size: 1.8em;
+    }
+
+    .form-container h3 {
+        font-size: 1.4em;
+    }
+
+    .form-section input,
+    .form-section select {
+        padding: 10px 8px;
+    }
+
+    .surgeries-container {
+        flex-direction: column; /* Stack surgery inputs vertically on small screens */
+        gap: 10px;
+    }
+
+    .surgeries-container select,
+    .surgeries-container input[type="number"],
+    .remove-button {
+        width: 100%; /* Full width when stacked */
+    }
+
+    button[type="submit"],
+    .secondary {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
 }
